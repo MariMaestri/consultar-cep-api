@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AUTOCOMPLETAR ENDEREÇO PELO CEP </h1>
+    <div class="conteiner">
+        <div class="consultar">
+            <label for="cep">CEP:</label> 
+            <input onblur="consultaCep()" type="number" name="cep" id="cep" placeholder="digite seu cep" minlength="8" maxlength="8" required>
+        </div>
+        <div class="botao">
+            <button onclick="consultaCep()"><b>CONSULTAR</b></button>
+        </div>
+    </div>
+    
+    <div class="form">
+        <form action="#" id="form">
+            <div class="form-header">
+                <h4>INOFORMAÇÕES DO ENDEREÇO:</h4>
+            </div>
+
+            <div class="info">
+                <div class="uf">
+                    <label for="uf">UF:</label>
+                    <input type="text" id="uf" disabled>
+                </div>
+                <div class="cep">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="text_cep" disabled>
+                </div>
+                <div class="ibge">
+                    <label for="ibge">IBGE:</label>
+                    <input type="text" id="ibge" disabled>
+                </div>
+                <div class="bairro">
+                    <label for="bairro">BAIRRO:</label>
+                    <input type="text" id="bairro" disabled>
+                </div>
+                <div class="localidade">
+                    <label for="localidade">LOCALIDADE:</label>
+                    <input type="text" id="localidade" disabled>
+                </div>
+                <div class="logradouro">
+                    <label for="logradouro">LOGRADOURO:</label>
+                    <input type="text" id="logradouro" disabled>
+                </div>
+                <div class="complemento">
+                    <label for="complemento">COMPLEMENTO:</label>
+                    <input type="text" id="complemento" placeholder="">
+                </div>
+            </div>
+
+            <div class="botao2">
+                <button onclick="salvarInfo()"><b>SALVAR</b></button>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>    
+    <script src="app.js"></script>    
+</body>
+</html>
